@@ -16,10 +16,11 @@ public class Offer09 {
         outStack = new ArrayDeque<>();
     }
 
+    
     public void appendTail(int value) {
         inStack.push(value);
     }
-    
+
     public int deleteHead() {
         if (outStack.isEmpty()) {
             if (inStack.isEmpty()) {
