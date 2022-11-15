@@ -15,7 +15,8 @@ public class Offer09 {
         inStack = new ArrayDeque<>();
         outStack = new ArrayDeque<>();
     }
-    
+
+
     public void appendTail(int value) {
         inStack.push(value);
     }
