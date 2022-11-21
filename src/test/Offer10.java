@@ -10,13 +10,22 @@ package test;
  * 答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。
  */
 public class Offer10 {
+    public static void main(String[] args) {
+        System.out.println(Solution.fib(5));
+    }
 
-    class Solution {
-        public int fib(int n) {
+    static class Solution {
+        public static int fib(int n) {
             if (n == 0 || n == 1) {
                 return n;
             }
-            
+            int a = 0, b = 1;
+            for (int i = 2; i <= n; i++) {
+                b = b + a;
+                a = b - a;
+                b = b % 1000000007;
+            }
+            return b;
         }
     }
 }
